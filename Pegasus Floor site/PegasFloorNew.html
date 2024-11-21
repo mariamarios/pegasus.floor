@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegasus Floor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+            background: linear-gradient(135deg, #333333, #666666); /* Темніший градієнт */
+            color: white; /* Білий колір тексту */
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+            border: 5px solid #fff; /* Товстіша біла рамка навколо логотипу */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 40px; /* Збільшений розмір тексту для назви */
+            color: white; /* Білий колір заголовку */
+        }
+        h2 {
+            text-align: center;
+            color: white; /* Білий колір заголовків */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            text-align: justify;
+            color: white; /* Білий колір тексту абзаців */
+        }
+        a {
+            color: #00aaff; /* Світло-блакитний колір для посилань */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact-info h3 {
+            color: white; /* Білий колір заголовка для контактної інформації */
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff; /* Темно-синий фон для кнопок */
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            text-align: center;
+        }
+        .social-buttons a:hover {
+            background-color: #0056b3; /* Темніший відтінок при наведенні */
+        }
+        .social-buttons img {
+            width: 20px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .language-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .language-buttons button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #003366; /* Дуже темний синій колір для кнопок */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .language-buttons button:hover {
+            background-color: #001a33; /* Темніший синій відтінок при наведенні */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="language-buttons">
+        <button onclick="changeLanguage('ua')">Українська</button>
+        <button onclick="changeLanguage('pl')">Polski</button>
+    </div>
+
+    <header>
+        <img src="logo.jpg" alt="Logo Pegasus Floor">
+        <h1 id="siteTitle">Pegasus Floor</h1>
+    </header>
+
+    <p id="introText">Jesteśmy profesjonalnym zespołem zajmującym się układaniem podłóg, parkietów i paneli. Naszym celem jest zapewnienie jakości, która będzie służyć przez długie lata!</p>
+
+    <h2 id="worksHeading">Nasze prace</h2>
+    <img src="floor1.jpg" alt="Przykład pracy Pegasus Floor">
+
+    <p id="descriptionText">Jeśli chcesz mieć idealnie ułożoną podłogę, skontaktuj się z nami! Więcej przykładów naszych prac znajdziesz na naszej stronie na <a href="https://www.instagram.com/pegasusfloor/" target="_blank">Instagramie</a>.</p>
+
+    <div class="contact-info">
+        <h3 id="contactHeading">Skontaktuj się z nami:</h3>
+        <p id="contactPhone">Telefon: <a href="tel:+48792912962">+48 792 912 962</a></p>
+    </div>
+
+    <div class="social-buttons">
+        <a href="https://www.instagram.com/pegasusfloor/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            Instagram
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61566963136554" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            Facebook
+        </a>
+    </div>
+
+    <script>
+        function changeLanguage(language) {
+            const lang = language === 'ua' ? 'ua' : 'pl';
+
+            // Тексти для польської
+            const texts_pl = {
+                siteTitle: "Pegasus Floor",
+                introText: "Jesteśmy profesjonalnym zespołem zajmującym się układaniem podłóg, parkietów i paneli. Naszym celem jest zapewnienie jakości, która będzie służyć przez długie lata!",
+                worksHeading: "Nasze prace",
+                descriptionText: "Jeśli chcesz mieć idealnie ułożoną podłogę, skontaktuj się z nami! Więcej przykładów naszych prac znajdziesz na naszej stronie na Instagramie.",
+                contactHeading: "Skontaktuj się z nami:",
+                contactPhone: "Telefon: +48 792 912 962"
+            };
+
+            // Тексти для української
+            const texts_ua = {
+                siteTitle: "Pegasus Floor",
+                introText: "Ми — професійна команда, яка займається укладанням підлог, паркетів та панелей. Наша мета — забезпечити якість, яка служитиме багато років!",
+                worksHeading: "Наші роботи",
+                descriptionText: "Якщо ви хочете мати ідеально укладену підлогу, зв'яжіться з нами! Більше прикладів наших робіт ви знайдете на нашій сторінці в Instagram.",
+                contactHeading: "Зв'яжіться з нами:",
+                contactPhone: "Телефон: +48 792 912 962"
+            };
+
+            const selectedTexts = lang === 'ua' ? texts_ua : texts_pl;
+
+            // Оновлення текстів на сторінці
+            document.getElementById('siteTitle').textContent = selectedTexts.siteTitle;
+            document.getElementById('introText').textContent = selectedTexts.introText;
+            document.getElementById('worksHeading').textContent = selectedTexts.worksHeading;
+            document.getElementById('descriptionText').textContent = selectedTexts.descriptionText;
+            document.getElementById('contactHeading').textContent = selectedTexts.contactHeading;
+            document.getElementById('contactPhone').textContent = selectedTexts.contactPhone;
+        }
+    </script>
+</body>
+</html>
